@@ -17,10 +17,10 @@ loopingAndBeepSound proc
     mov ah,2
     mov dl,"A"      ;This A is an ASCI value.
     
-    level:          ;This level is always repeat.
+    label:          ;This label is always repeat.
     int 21h
     inc dl          ;This is increment the value of dl register.
-    loop level      ;That means this level are repeted 26 time.
+    loop label      ;That means this label are repeted 26 time.
     
     
     ;Beep Sound
